@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toluwalase Famade | Christian Fiction Author</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;1,700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #fdf6e3;
+            --ink: #2d241e;
+            --gold: #c5a059;
+            --maroon: #5d1b1b;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Cormorant Garamond', serif;
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+        }
+
+        .font-heading { font-family: 'Playfair Display', serif; }
+        .font-script { font-family: 'Great Vibes', cursive; }
+
+        .rich-border {
+            border: 8px double var(--gold);
+        }
+
+        .book-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fffcf5;
+            border: 1px solid #e5dcc5;
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--maroon);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: var(--gold);
+        }
+
+        .ornament::before, .ornament::after {
+            content: '';
+            height: 1px;
+            width: 60px;
+            background: currentColor;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section { opacity: 0; }
+        section.visible { opacity: 1; transition: opacity 1s ease; }
+    </style>
+</head>
+<body class="selection:bg-yellow-200">
+
+    <!-- Header -->
+    <header class="py-8 px-6 sticky top-0 bg-[#fdf6e3]/90 backdrop-blur-sm z-50 border-b border-[#e5dcc5]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl font-heading font-bold tracking-tight text-[#5d1b1b]">Toluwalase Famade</h1>
+                <p class="font-script text-2xl text-[#c5a059] -mt-2">Storyteller of Faith & Grace</p>
+            </div>
+            <nav class="flex gap-8 uppercase tracking-widest text-sm font-semibold">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#books" class="nav-link">Bibliography</a>
+                <a href="#about" class="nav-link">The Journey</a>
+                <a href="#contact" class="nav-link">Connect</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="visible py-20 px-6 text-center fade-in">
+        <div class="max-w-4xl mx-auto py-16 px-8 rich-border bg-white shadow-2xl relative">
+            <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#fdf6e3] px-4">
+                <span class="text-4xl">❧</span>
+            </div>
+            <h2 class="text-5xl md:text-7xl font-heading mb-6 leading-tight">Weaving Truth into <br><span class="italic text-[#5d1b1b]">The Fabric of Fiction</span></h2>
+            <p class="text-xl md:text-2xl italic text-stone-600 mb-10 max-w-2xl mx-auto">
+                "For where your treasure is, there your heart will be also." 
+                I write stories that explore the intersection of human struggle and divine mercy.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#books" class="bg-[#5d1b1b] text-white px-10 py-4 rounded-sm hover:bg-[#3d1212] transition-colors font-bold uppercase tracking-widest text-xs">Explore My Books</a>
+                <a href="#about" class="border border-[#c5a059] text-[#5d1b1b] px-10 py-4 rounded-sm hover:bg-[#c5a059]/10 transition-colors font-bold uppercase tracking-widest text-xs">Read My Testimony</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bibliography -->
+    <section id="books" class="py-24 px-6 bg-stone-100/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="ornament mb-4">
+                <span class="uppercase tracking-[0.3em] font-bold text-xs">Published Works</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-heading text-center mb-16">The Bibliography</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Book 1 -->
+                <div class="book-card p-8 shadow-lg">
+                    <div class="w-full aspect-[2/3] bg-stone-200 mb-6 shadow-md border-r-4 border-stone-400 relative overflow-hidden flex items-center justify-center italic text-stone-400">
+                        <!-- Placeholder for book cover -->
+                        <span class="text-center px-4">The Redemption of Olasumbo</span>
+                        <div class="absolute top-0 left-2 w-1 h-full bg-white/20"></div>
+                    </div>
+                    <h3 class="text-2xl font-heading mb-2">The Redemption of Olasumbo</h3>
+                    <p class="text-sm text-[#c5a059] font-bold uppercase tracking-tighter mb-4 italic">Novel • Released 2023</p>
+                    <p class="text-stone-600 leading-relaxed mb-6">
+                        A gripping tale of a woman fleeing her past in Lagos, only to find that the grace she seeks has been following her all along.
+                    </p>
+                    <button class="text-[#5d1b1b] font-bold uppercase text-xs border-b-2 border-[#5d1b1b] pb-1 hover:text-[#c5a059] hover:border-[#c5a059] transition-all">Preview Chapters</button>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="book-card p-8 shadow-lg">
+                    <div class="w-full aspect-[2/3] bg-stone-200 mb-6 shadow-md border-r-4 border-stone-400 relative overflow-hidden flex items-center justify-center italic text-stone-400">
+                        <span class="text-center px-4">Shadows of the Altar</span>
+                        <div class="absolute top-0 left-2 w-1 h-full bg-white/20"></div>
+                    </div>
+                    <h3 class="text-2xl font-heading mb-2">Shadows of the Altar</h3>
+                    <p class="text-sm text-[#c5a059] font-bold uppercase tracking-tighter mb-4 italic">Short Story Collection • 2024</p>
+                    <p class="text-stone-600 leading-relaxed mb-6">
+                        Twelve stories exploring the hidden battles of faith fought behind the closed doors of contemporary churches.
+                    </p>
+                    <button class="text-[#5d1b1b] font-bold uppercase text-xs border-b-2 border-[#5d1b1b] pb-1 hover:text-[#c5a059] hover:border-[#c5a059] transition-all">Read Online</button>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="book-card p-8 shadow-lg">
+                    <div class="w-full aspect-[2/3] bg-stone-200 mb-6 shadow-md border-r-4 border-stone-400 relative overflow-hidden flex items-center justify-center italic text-stone-400">
+                        <span class="text-center px-4">Faith in the Valley</span>
+                        <div class="absolute top-0 left-2 w-1 h-full bg-white/20"></div>
+                    </div>
+                    <h3 class="text-2xl font-heading mb-2">Faith in the Valley</h3>
+                    <p class="text-sm text-[#c5a059] font-bold uppercase tracking-tighter mb-4 italic">Novella • Coming 2025</p>
+                    <p class="text-stone-600 leading-relaxed mb-6">
+                        A young man’s journey through the rural landscapes of Nigeria as he discovers the power of prayer in the most unlikely places.
+                    </p>
+                    <button class="text-stone-400 font-bold uppercase text-xs border-b-2 border-stone-200 pb-1 cursor-not-allowed">Pre-order Soon</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Testimony -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <h2 class="text-4xl md:text-5xl font-heading mb-8">The Heart Behind <span class="italic">The Pen</span></h2>
+                <div class="space-y-6 text-xl leading-relaxed text-stone-700">
+                    <p>
+                        I didn't start as a writer; I started as a seeker. Growing up in the vibrant chaos of Lagos, I saw the beauty of faith and the complexity of human nature in every street corner.
+                    </p>
+                    <p>
+                        My mission is simple: to create Christian fiction that doesn't shy away from the darkness, but always points toward the Light. I believe our stories should be as honest as the Psalms and as hopeful as the Resurrection.
+                    </p>
+                    <p class="font-script text-3xl text-[#5d1b1b]">
+                        - Toluwalase Famade
+                    </p>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="relative p-4 border border-[#c5a059]">
+                    <div class="bg-stone-300 aspect-square rounded-sm overflow-hidden flex items-center justify-center text-stone-500 italic">
+                        [ Portrait of Toluwalase ]
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 bg-[#5d1b1b] text-white p-8 shadow-2xl">
+                        <p class="text-sm font-bold uppercase tracking-widest mb-2">Current Inspiration</p>
+                        <p class="text-lg italic font-heading">"Grace is not a safety net; it's the very ground we walk on."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Newsletter -->
+    <section id="contact" class="py-24 px-6 bg-[#2d241e] text-[#fdf6e3]">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-heading mb-6">Join the Prayerful Reader's List</h2>
+            <p class="text-stone-400 text-xl mb-12">Receive monthly devotionals, book updates, and exclusive short stories delivered to your inbox.</p>
+            
+            <form id="subscribeForm" class="flex flex-col md:flex-row gap-4 mb-16">
+                <input type="email" placeholder="Your email address" class="flex-grow bg-transparent border border-stone-600 p-4 focus:border-[#c5a059] outline-none text-white">
+                <button type="submit" class="bg-[#c5a059] text-[#2d241e] px-12 py-4 font-bold uppercase tracking-widest hover:bg-[#d9b675] transition-colors">Join Now</button>
+            </form>
+
+            <div class="flex flex-col items-center">
+                <div class="ornament mb-8 w-full"></div>
+                <div class="flex gap-10 text-2xl">
+                    <a href="#" class="hover:text-[#c5a059] transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-[#c5a059] transition-colors">Facebook</a>
+                    <a href="#" class="hover:text-[#c5a059] transition-colors">Twitter</a>
+                </div>
+                <p class="mt-12 text-stone-500 text-sm tracking-[0.2em] uppercase font-bold">Lagos, Nigeria • Established by Grace</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-[#1a1512] text-stone-600 text-center text-xs uppercase tracking-widest">
+        <div class="max-w-6xl mx-auto px-6">
+            &copy; <span id="year"></span> Toluwalase Famade. Soli Deo Gloria.
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        // Reveal animations on scroll
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.style.animation = "fadeIn 1.2s ease-out forwards";
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Form handling
+        document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            if(email) {
+                const btn = this.querySelector('button');
+                const oldText = btn.innerText;
+                btn.innerText = "THANK YOU!";
+                btn.style.backgroundColor = "#2d5d1b";
+                btn.style.color = "white";
+                this.querySelector('input').value = "";
+                setTimeout(() => {
+                    btn.innerText = oldText;
+                    btn.style.backgroundColor = "#c5a059";
+                    btn.style.color = "#2d241e";
+                }, 3000);
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
